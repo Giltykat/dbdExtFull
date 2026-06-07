@@ -49,7 +49,7 @@ inline void RenderMenu() {
         ImGui::PopFont();
         
         ImGui::PushStyleColor(ImGuiCol_Separator, ImVec4(0.18f, 0.18f, 0.20f, 1.00f));
-        ImGui::SeparatorEx(ImGuiSeparatorFlags_Horizontal);
+        ImGui::Separator();
         ImGui::PopStyleColor();
         
         ImGui::Spacing();
@@ -90,12 +90,12 @@ inline void RenderMenu() {
                     };
                     
                     for (auto& ent : entities) {
-                        ImGui::PushID(ent->label);
-                        ImGui::Checkbox(ent->label, ent->enabled);
-                        InfoTooltip(ent->tooltip);
+                        ImGui::PushID(ent.label);
+                        ImGui::Checkbox(ent.label, ent.enabled);
+                        InfoTooltip(ent.tooltip);
                         ImGui::SameLine();
                         ImGui::SetCursorPosX(ImGui::GetCursorPosX() + 10);
-                        ImGui::ColorEdit4("##Color", ent->color, 
+                        ImGui::ColorEdit4("##Color", ent.color, 
                             ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar | ImGuiColorEditFlags_PickerHueWheel);
                         InfoTooltip("Click to change color");
                         ImGui::PopID();
@@ -106,7 +106,7 @@ inline void RenderMenu() {
                 ImGui::EndGroup();
                 
                 ImGui::SameLine();
-                ImGui::SeparatorEx(ImGuiSeparatorFlags_Vertical);
+                ImGui::Separator();
                 ImGui::SameLine();
                 
                 // Display Options Group
