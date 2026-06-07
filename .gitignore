@@ -1,1 +1,46 @@
-Nothing should be ignored based on the provided file changes. The only modified file is a header file (`dbdExtFull/Menu/Menu.h`), which is source code and should not be ignored. No build artifacts, dependencies, or temporary files are present in the changes.
+```
+# Compiled files
+*.gch
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.class
+*.out
+
+# Build directories
+build/
+dist/
+target/
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.gradle/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.env.*
+
+# Logs and coverage
+*.log
+*.tmp
+coverage/
+htmlcov/
+.coverage
+```

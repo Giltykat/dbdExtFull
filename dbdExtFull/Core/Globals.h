@@ -68,18 +68,18 @@ struct LocalPlayer {
 
 namespace config {
     inline bool g_espSurvivors = true;
-    inline float g_colorSurvivor[3] = { 0.0f, 1.0f, 0.0f };
+    inline float g_colorSurvivor[4] = { 0.0f, 1.0f, 0.0f, 1.0f };
     inline bool g_espKillers = true;
-    inline float g_colorKiller[3] = { 1.0f, 0.0f, 0.0f };
+    inline float g_colorKiller[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
     inline bool g_espGenerators = true;
-    inline float g_colorGenerator[3] = { 1.0f, 1.0f, 0.0f };
+    inline float g_colorGenerator[4] = { 1.0f, 1.0f, 0.0f, 1.0f };
     inline bool g_drawEspCornerBox = true;
     inline bool g_drawLines = false;
     inline bool g_drawDistance = true;
     inline bool g_drawName = true;
-    inline float g_colorName[3] = { 1.0f, 1.0f, 1.0f };
+    inline float g_colorName[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
     inline bool g_drawCrosshair = true;
-    inline float g_colorCrosshair[3] = { 1.0f, 0.0f, 0.0f };
+    inline float g_colorCrosshair[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
     inline bool g_auraEsp = false;
     inline bool g_fovChanger = false;
     inline float g_fovValue = 100.0f;
