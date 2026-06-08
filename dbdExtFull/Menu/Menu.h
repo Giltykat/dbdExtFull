@@ -197,6 +197,13 @@ inline void RenderMenu() {
                     ImGui::Checkbox("Instant Bell (Wraith)", &config::g_instantBell);
                     InfoTooltip("Instantly rings the bell - WRAITH ONLY");
                     
+                    ImGui::Separator();
+                    ImGui::Spacing();
+                    
+                    // External Aura Patch
+                    ImGui::Checkbox("External Aura (Always On)", &config::g_auraPatch);
+                    InfoTooltip("Patches aura check function to always return 1 - makes auras visible externally");
+                    
                     ImGui::PopID();
                 }
                 

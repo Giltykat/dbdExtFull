@@ -56,6 +56,7 @@ inline void RunLocalPlayerWorker() {
         uintptr_t local_player = Kernel->read<uintptr_t>(local_players_array); if (!valid_ptr(local_player)) continue;
         uintptr_t player_controller = Kernel->read<uintptr_t>(local_player + Offsets::PlayerController); if (!valid_ptr(player_controller)) continue;
         uintptr_t pawn = Kernel->read<uintptr_t>(player_controller + Offsets::AcknowledgedPawn); if (!valid_ptr(pawn)) continue;
+        tick_aura_patch();
         tick_attack_exploits(pawn); tick_wraith_exploits(pawn); tick_speed_hack(pawn); tick_deadhard(pawn, globals.killer_pawn.load());
         if (config::g_fovChanger || config::g_aspectRatioChanger) {
             uintptr_t camera_comp = Kernel->read<uintptr_t>(pawn + Offsets::CameraComponent);
