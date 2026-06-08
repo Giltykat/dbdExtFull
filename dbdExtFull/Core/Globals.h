@@ -95,6 +95,7 @@ namespace config {
     inline bool g_autoDeadHard = false;
     inline int  g_autoDeadHardKey = VK_XBUTTON2;
     inline int  g_deadHardKey = 'E';
+    inline bool g_auraPatch = false;
 }
 
 struct Globals {
